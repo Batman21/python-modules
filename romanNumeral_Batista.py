@@ -1,5 +1,6 @@
 """
 Roman Numeral Algorithm
+Converts a string of Roman numerals into an integer.
 """
 #  Value Mapper.
 
@@ -16,7 +17,9 @@ ROMAN_NUMERALS = {
 
 
 def precision_test(negative_list):
-    # Error prone R.N. end with a list that is not greatest to lowest naturally
+    """
+    Error prone R.N. end with a list that is not greatest to lowest naturally
+    """
     precision_test = negative_list[:]
     precision_test.sort()
     precision_test.reverse()
@@ -27,7 +30,9 @@ def precision_test(negative_list):
 
 
 def analyze_list(helper_list):
-    # Looping func for the list result R.N.
+    """
+    Looping func for the list result R.N.
+    """
     x = 0
     helper_len = len(helper_list) - 1
     negative_list = []
@@ -51,7 +56,9 @@ def analyze_list(helper_list):
 
 
 def conversion(roman):
-    # Main function
+    """
+    Entry function
+    """
     helper_list = []
     roman = roman.upper()
     roman = roman.replace(" ", "")
@@ -62,7 +69,9 @@ def conversion(roman):
 
 
 def testing_conversion():
-    # Script loop
+    """
+    Allowing it to run in shell continuously.
+    """
     while 1:
         print("Enter roman numerals.")
         conversion(input(""))
